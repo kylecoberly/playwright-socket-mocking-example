@@ -22,6 +22,7 @@ test("sending socket messages", async ({page, navigate}) => {
 
   await expect(page.locator(".message")).toHaveText("Yet Another Payload")
 })
+```
 
 Note that this accepts the web URL you want to navigate to, not a socket URL. The `page` fixture still works like normal.
 
