@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Socket</title>
+  </head>
+  <body>
+    <p class="message"></p>
+    <button>Send</button>
+    <script>
+      const socket = new WebSocket("ws://localhost:3030")
+
+      const $button = document.querySelector("button")
+      $button.addEventListener("click", () => {
+        socket.send("Aloha!")
+      })
+
+      socket.addEventListener("message", (event) => {
+        const $message = document.querySelector(".message")
+        $message.textContent = event.data
+      })
+    </script>
+  </body>
+</html>
