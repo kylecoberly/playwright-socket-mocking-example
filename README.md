@@ -3,8 +3,7 @@
 ## Setup
 
 * `npm install`
-* `npm start` to run the server
-* `npm test` to run socket tests against it
+* `npm ci` to run the server test against it
 
 ## Usage
 
